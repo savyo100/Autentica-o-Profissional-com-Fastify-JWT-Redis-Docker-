@@ -52,7 +52,7 @@ Realiza o login do profissional e gera os tokens de autenticação.
 }
 ```
 
-* **Implementação**: `src/controllers/authController.ts` (linhas 19–54)
+* **Implementação**: `src/controllers/authController.ts` 
 
 ---
 
@@ -70,7 +70,7 @@ Rota protegida que valida:
 Authorization: Bearer <accessToken>
 ```
 
-* **Implementação**: `src/controllers/authController.ts` (linhas 60–90)
+* **Implementação**: `src/controllers/authController.ts` 
 
 ---
 
@@ -92,7 +92,7 @@ Renova a sessão utilizando o Refresh Token.
   * Gera um novo Access Token
   * Atualiza a sessão no Redis com novo TTL
 
-* **Implementação**: `src/controllers/authController.ts` (linhas 96–126)
+* **Implementação**: `src/controllers/authController.ts` 
 
 ---
 
@@ -111,7 +111,7 @@ Authorization: Bearer <accessToken>
   * Remove a chave `token:<userId>` do Redis
   * Invalida a sessão ativa
 
-* **Implementação**: `src/controllers/authController.ts` (linhas 133–152)
+* **Implementação**: `src/controllers/authController.ts` 
 
 ---
 
@@ -159,15 +159,15 @@ curl -X POST http://localhost:3000/auth/logout \
 
 ### 🔑 Geração de Tokens
 
-* **Access Token**: `src/services/tokenServices.ts` (linhas 15–19)
-* **Refresh Token**: `src/services/tokenServices.ts` (linhas 21–25)
+* **Access Token**: `src/services/tokenServices.ts` 
+* **Refresh Token**: `src/services/tokenServices.ts` 
 
 ---
 
 ### 🗄️ Armazenamento de Sessão no Redis
 
 * Função: `saveTokenInCache(userId, token, ttl)`
-* Arquivo: `src/services/tokenServices.ts` (linhas 31–41)
+* Arquivo: `src/services/tokenServices.ts` 
 * O TTL é controlado pela constante `ACCESS_TTL_SECONDS`, que acompanha o tempo de expiração do Access Token.
 
 ---
@@ -175,7 +175,7 @@ curl -X POST http://localhost:3000/auth/logout \
 ### ✅ Validação de Token e Sessão
 
 * Verificação do JWT + checagem do token no Redis
-* Implementação: `src/controllers/authController.ts` (linhas 72–81)
+* Implementação: `src/controllers/authController.ts` 
 
 ---
 
@@ -184,13 +184,13 @@ curl -X POST http://localhost:3000/auth/logout \
 * Validação do Refresh Token
 * Emissão de novo Access Token
 * Salvamento no Redis com novo TTL
-* Implementação: `src/controllers/authController.ts` (linhas 118–125)
+* Implementação: `src/controllers/authController.ts` 
 
 ---
 
 ### ❌ Invalidação de Sessão (Logout)
 
 * Função: `deleteTokenFromCache(userId)`
-* Arquivo: `src/services/tokenServices.ts` (linhas 49–52)
+* Arquivo: `src/services/tokenServices.ts` 
 * Utilizada no endpoint de logout
 

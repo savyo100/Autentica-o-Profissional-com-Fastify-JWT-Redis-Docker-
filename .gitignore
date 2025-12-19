@@ -1,0 +1,97 @@
+# ==============================
+
+# Node.js / TypeScript
+
+# ==============================
+
+node_modules/
+dist/
+build/
+
+# ==============================
+
+# Logs
+
+# ==============================
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ==============================
+
+# Environment variables
+
+# ==============================
+
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# ==============================
+
+# Redis / Docker
+
+# ==============================
+
+redis-data/
+
+# ==============================
+
+# Docker
+
+# ==============================
+
+.docker/
+docker-compose.override.yml
+
+# ==============================
+
+# OS / Editor
+
+# ==============================
+
+.DS_Store
+Thumbs.db
+
+# ==============================
+
+# IDEs
+
+# ==============================
+
+.vscode/
+.idea/
+
+# ==============================
+
+# Coverage / Tests
+
+# ==============================
+
+coverage/
+
+# ==============================
+
+# Temporary files
+
+# ==============================
+
+*.tmp
+*.temp
+*.swp
+
+# ==============================
+
+# Optional: lock files (descomente se desejar ignorar)
+
+# ==============================
+
+# package-lock.json
+
+# yarn.lock
+
+# pnpm-lock.yaml
